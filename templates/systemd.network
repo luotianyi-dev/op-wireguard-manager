@@ -1,0 +1,10 @@
+[Match]
+Name=wg{peer_id}
+
+[Network]
+LinkLocalAddressing=no
+ConfigureWithoutCarrier=yes
+
+[Address]
+Address={node_private_ip}/32
+Peer={peer_private_ip}/32

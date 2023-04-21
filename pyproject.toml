@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "wireguard-manager"
+description = ""
+version = "1.0.0"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

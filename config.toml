@@ -1,0 +1,47 @@
+address = "7.12.1.{id}"
+subnet = 24
+
+[ssh]
+key = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGoM4/Yu80rZlev6RZwFWlU+LREb5Dv4wAh3Mo1RHgjA YubiKey: Luo Tianyi's GPG Key@MacBook Air M2"
+]
+user-home = "/root"
+
+[systemd]
+networkd-importance = 20
+
+[docker]
+address = "7.12.{id}{i}.0/24"
+host = [2, 3]
+
+[[node]]
+id = 2
+name = "hellobyedays"
+public-ip = "104.128.189.82"
+ssh-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBy2xdXk/yrdD9aUCTQu7TyYfDfsDjP8hUFZcSXzZIkt root@hellobyedays"
+wg-pubkey = "R6x26Q+7VRa/Cyc3LjT+jtnf9Ba8x4AFiraFt5xp7Ao="
+peers = [3, 5, 6]
+
+[[node]]
+id = 3
+name = "nightvoyager"
+public-ip = "154.3.38.80"
+ssh-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPekn2Qbd6bGmSHbeskpYTiTQ0eWEeSzXERtLcP4fxwH root@nightvoyager"
+wg-pubkey = "VsPjqJCv37NUT9WaACIDi+6sqV0d27H1jvU8CIFgWn8="
+peers = [2]
+
+[[node]]
+id = 5
+name = "monologue"
+public-ip = "192.9.128.15"
+ssh-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFfHYMNRneUu0+qkIQq2qIE6zczPYgU4NIJUz67XESdI root@monologue"
+wg-pubkey = "BQkEUUGpJlBY4l6cigpt496Cd6+kIUf6u4khfAozH0Q="
+peers = [2]
+
+[[node]]
+id = 6
+name = "starlight"
+public-ip = "192.9.128.15"
+ssh-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPqqqH6xCZguJY9svDPJVNLE/vk+mDCgN+OMdvbOOmpx root@starlight"
+wg-pubkey = "fhwXdjEHo8AXW7419LbWdXIRClPAnIwp5uR3uaJ3yyg="
+peers = [2]

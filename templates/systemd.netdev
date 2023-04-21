@@ -1,0 +1,14 @@
+[NetDev]
+Name=wg{peer_id}
+Kind=wireguard
+
+[WireGuard]
+PrivateKey={node_privkey}
+ListenPort=5182{peer_id}
+RouteTable=off
+
+[WireGuardPeer]
+PublicKey={peer_pubkey}
+AllowedIPs=0.0.0.0/0, ::/0
+PersistentKeepalive=30
+Endpoint={peer_public_ip}:5182{node_id}
